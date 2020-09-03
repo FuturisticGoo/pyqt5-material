@@ -4,7 +4,7 @@ This is another stylesheet for PyQt5 which looks like Material Design
 This is forked from the amazing stylesheet made by UN-GCPDS, here : https://github.com/UN-GCPDS/pyside-material
 
 
-There is some custom dark themes:
+Some custom dark themes:
 
 ![Dark](https://github.com/UN-GCPDS/pyside-material/raw/master/docs/source/images/dark.gif)
 
