@@ -1,6 +1,6 @@
 import os
 
-from pyside_material import list_themes
+from pyqt5_material import list_themes
 
 themes = list_themes()
 themes = [t.replace('.xml', '') for t in themes]

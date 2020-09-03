@@ -1,6 +1,7 @@
-# PySide Material
+# PyQt5 Material
 
-This is another stylesheet for PySide, this time looks like Material Design.
+This is another stylesheet for PyQt5 which looks like Material Design
+This is forked from the amazing stylesheet made by UN-GCPDS, here : https://github.com/UN-GCPDS/pyside-material
 
 
 There is some custom dark themes:
@@ -14,17 +15,17 @@ And light:
 
 
 ## Install
-
+Clone this repository and go to that path, then
 ```bash
-  pip install pyside-material
+  python setup.py install
 ```
 
 ## Usage
 
 ```python
 import sys
-from PySide2 import QtWidgets
-from pyside_material import apply_stylesheet
+from PyQt5 import QtWidgets
+from pyqt5_material import apply_stylesheet
 
 # create the application and the main window
 app = QtWidgets.QApplication(sys.argv)
@@ -41,7 +42,7 @@ app.exec_()
 ## Themes
 
 ```
-from pyside_material import list_themes
+from pyqt5_material import list_themes
 
 list_themes()
 ```

@@ -1,16 +1,16 @@
 import os
 import sys
 
-from PySide2.QtWidgets import QApplication, QAction
-from PySide2 import QtGui, QtWidgets
-from PySide2.QtCore import QTimer
-from PySide2.QtUiTools import QUiLoader
-from PySide2.QtCore import Qt, QCoreApplication
+from PyQt5.QtWidgets import QApplication, QAction
+from PyQt5 import QtGui, QtWidgets
+from PyQt5.QtCore import QTimer
+from PyQt5.QtUiTools import QUiLoader
+from PyQt5.QtCore import Qt, QCoreApplication
 
-from pyside_material import apply_stylesheet, list_themes
+from pyqt5_material import apply_stylesheet, list_themes
 
 # To load window icon
-from pyside_material.resources import logos_rc
+from pyqt5_material.resources import logos_rc
 
 QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 

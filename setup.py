@@ -8,23 +8,23 @@ from setuptools import setup, find_packages
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='pyside-material',
-    version='1.13',
-    packages=['pyside_material', 'pyside_material.resources'],
+    name='pyqt5-material',
+    version='1.14',
+    packages=['pyqt5_material', 'pyqt5_material.resources'],
 
-    author='Yeison Cardona',
-    author_email='yencardonaal@unal.edu.co',
+    author='Yeison Cardona, Aman Anifer',
+    author_email='yencardonaal@unal.edu.co, amananiferfiaff@gmail.com',
     maintainer='Yeison Cardona',
     maintainer_email='yencardonaal@unal.edu.co',
 
-    download_url='https://github.com/UN-GCPDS/pyside-material',
+    download_url='https://github.com/FuturisticGoo/pyqt5-material',
 
-    install_requires=['pyside2',
+    install_requires=['pyqt5',
                       ],
 
     include_package_data=True,
     license='BSD License',
-    description="PySide2 stylesheet.",
+    description="PyQt5 Stylesheet.",
     #    long_description = README,
 
     classifiers=[
