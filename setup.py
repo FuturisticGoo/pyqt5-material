@@ -7,9 +7,13 @@ from setuptools import setup, find_packages
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long = f.read()
 setup(
     name='pyqt5-material',
-    version='1.14',
+    version='1.14.2',
     packages=['pyqt5_material', 'pyqt5_material.resources'],
     author='Yeison Cardona, Aman Anifer',
     author_email='yencardonaal@unal.edu.co, amananiferfiaff@gmail.com',
@@ -24,7 +28,8 @@ setup(
     include_package_data=True,
     license='BSD License',
     description="PyQt5 Stylesheet.",
-    #    long_description = README,
+    long_description = long,
+	long_description_content_type='text/markdown',
 
     classifiers=[
 

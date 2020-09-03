@@ -15,9 +15,8 @@ And light:
 
 
 ## Install
-Clone this repository and go to that path, then
 ```bash
-  python setup.py install
+  pip install pyqt5-material
 ```
 
 ## Usage
