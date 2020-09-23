@@ -64,9 +64,19 @@ QPushButton {
     border-radius: 4px;
     padding: 8px 16px ;
     height: 18px;
-    /*min-height: 18px;*/
-    /*max-height: 18px;*/
     font-weight: bold;
+}
+
+QPushButton {
+    margin: 0px;
+    padding: 0px 16px;
+}
+
+
+QPushButton {
+    height: 34px;
+    min-height: 34px;
+    max-height: 34px;
 }
 
 
@@ -83,7 +93,7 @@ QComboBox:disabled
     border-width: 0 0 2px 0;
     border-radius: 4px;
     padding: 8px 16px ;
-    height: 18px;
+    /*height: 18px;*/
     font-weight: bold;
 }
 
@@ -98,7 +108,7 @@ QDoubleSpinBox,
 .QLineEdit,
 QComboBox {
 
-    height: 18px;
+    /*height: 18px;*/
     /*font-weight: bold;*/
 
     color: {{primaryColor}};
@@ -109,7 +119,7 @@ QComboBox {
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    margin: 5px 0;
+    /*margin: 5px 0;*/
 
 }
 
@@ -265,13 +275,13 @@ QPushButton:flat {
 }
 
 QPushButton:flat:hover {
-    color: {{primaryLightColor}};
+    /*color: {{primaryColor|opacity(0.6)}};*/
     /*background-color: {{primaryLightColor|opacity(0.4)}};*/
 }
 
 QPushButton:flat:pressed,
 QPushButton:flat:checked {
-    color: {{primaryDarkColor|opacity(0.4)}};
+    color: {{primaryLightColor}};
     /*background-color: {{primaryDarkColor}};*/
 }
 
@@ -599,8 +609,8 @@ QMenu::item {
 
 
 
-QMenu::item:selected { /* when user selects item using mouse or keyboard */
-    color: {{secondaryDarkColor}};
+QMenu::item:selected {
+    color: {{primaryTextColor}};
     background-color: {{primaryColor}};
     /*border: 1px solid {{secondaryColor}};*/
     border-radius: 4px;
@@ -608,7 +618,7 @@ QMenu::item:selected { /* when user selects item using mouse or keyboard */
 
 
 QMenuBar::item:disabled,
-QMenu::item:disabled { /* when user selects item using mouse or keyboard */
+QMenu::item:disabled {
     color: {{secondaryTextColor|opacity(0.3)}};
     /*background-color: {{primaryColor}};*/
 }
@@ -685,23 +695,21 @@ QMenu::indicator:exclusive:checked:selected {
 QMenuBar {
     background-color: {{secondaryColor}};
     color: {{secondaryTextColor}};
-    /*height: 30px;*/
-    /*color: red;*/
 }
 
 
 
 QMenuBar::item {
+    height: 33px;
     spacing: 3px;
     padding: 8px 8px;
     background-color: transparent;
-    /*border-radius: 4px;*/
+    color: {{secondaryTextColor}};
 }
-
 
 QMenuBar::item:selected,
 QMenuBar::item:pressed {
-    color: {{secondaryDarkColor}};
+    color: {{primaryTextColor}};
     background-color: {{primaryColor}};
 
 }
@@ -847,20 +855,20 @@ border-color: red;
 }
 
 
-/*QMdiArea{*/
+QMdiArea{
 
     /*background-color:{{secondaryColor}};*/
     /*background:{{secondaryColor}};*/
 
-/*}*/
+}
 
 QMdiSubWindow{
 
 /*border-radius: 2px;*/
-/*border-color: {{primaryLightColor}};*/
+/*border-color: red;*/
 /*background: {{secondaryColor}};*/
 /*background-color: {{secondaryColor}};*/
-/*border: 1px solid {{secondaryLightColor}};*/
+/*border: 1px solid red;*/
 
 }
 
@@ -1007,6 +1015,20 @@ QTreeView::branch:open:has-children:has-siblings  {
 
 /*Themed*/
 
+.accent{
+    color: {{primaryColor}};
+}
+.danger{
+    color: {{danger}};
+}
+
+.warning{
+    color: {{warning}};
+}
+
+.success{
+    color: {{success}};
+}
 
 QPushButton.danger{
     border-color: {{danger}};
@@ -1064,3 +1086,4 @@ QTableView {
 /*background-color: {{secondaryColor|opacity(0.5)}};*/
 
 /*}*/
+
