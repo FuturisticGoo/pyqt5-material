@@ -21,7 +21,7 @@ setup(
     maintainer_email='amananiferfiaff@gmail.com',
 	url='https://github.com/FuturisticGoo/pyqt5-material',
     download_url='https://github.com/FuturisticGoo/pyqt5-material',
-	keywords=['PyQt5','pyqt','material','stylesheet'],
+	keywords=['PyQt5','pyqt','material','stylesheet','design'],
     install_requires=['pyqt5',
                       ],
 
