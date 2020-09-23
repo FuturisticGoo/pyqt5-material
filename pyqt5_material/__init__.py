@@ -8,7 +8,7 @@ import jinja2
 template = 'material.css.template'
 _resource = os.path.join('resources', 'resource_rc.py')
 
-from PySide2.QtWidgets import QAction
+from PyQt5.QtWidgets import QAction
 
 
 # ----------------------------------------------------------------------
@@ -72,8 +72,8 @@ def get_theme(theme_name, light_secondary=False):
                   'secondaryDarkColor',
                   'primaryTextColor',
                   'secondaryTextColor']:
-        os.environ[f'PYSIDEMATERIAL_{color.upper()}'] = theme[color]
-    os.environ['PYSIDEMATERIAL_THEME'] = theme_name
+        os.environ[f'PYQT5MATERIAL_{color.upper()}'] = theme[color]
+    os.environ['PYQT5MATERIAL_THEME'] = theme_name
 
     return theme
 
@@ -168,7 +168,7 @@ def list_themes():
 
 
 ########################################################################
-class PySideStyleSwitcher:
+class PyQt5StyleSwitcher:
     """"""
     # ----------------------------------------------------------------------
 
