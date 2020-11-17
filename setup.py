@@ -13,7 +13,7 @@ with open(os.path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long = f.read()
 setup(
     name='pyqt5-material',
-    version='1.14.3',
+    version='1.14.4',
     packages=['pyqt5_material', 'pyqt5_material.resources'],
     author='Yeison Cardona, Aman Anifer',
     author_email='yencardonaal@unal.edu.co, amananiferfiaff@gmail.com',

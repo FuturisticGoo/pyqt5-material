@@ -71,7 +71,7 @@ dark_red.xml
 
 # Custom colors
 
-`Color Tool <https://material.io/resources/color//>`_ is the best way to
+[Color Tool](https://material.io/resources/color/) is the best way to
 generate new themes, just choose colors and export as `Android XML`, the theme
 file must look like:
 
@@ -104,3 +104,23 @@ Light will need to add `light_secondary` argument as `True`.
 ```python
 apply_stylesheet(app, theme='dark_teal.xml', light_secondary=True)
 ```
+# Issues
+
+There seems to be an issue when packaging the python file using pyinstaller, it doesn't automatically add the resources folder to the data. A quick fix for this is to first make the spec file
+
+```bash
+pyi-makespec --windowed <python source>
+```
+Here I am using `--windowed` for hiding the console when executing, you can change that
+Next, open the .spec file and add `import pyqt5_material,os` at the top, then inside the Analysis datas list, paste this `(os.path.dirname(pyqt5_material.__file__)+"\\resources","pyqt5_material\\resources")` if you're using Windows. If you're using *nix, paste `(os.path.dirname(pyqt5_material.__file__)+"/resources","pyqt5_material/resources")`
+```python
+datas=[(os.path.dirname(pyqt5_material.__file__)+"\\resources","pyqt5_material\\resources")]  #If it's Windows
+        
+datas=[(os.path.dirname(pyqt5_material.__file__)+"/resources","pyqt5_material/resources")]  #If its *nix
+```
+Save it and now run
+```bash 
+pyinstaller <spec file>
+```
+It should work now.
+
