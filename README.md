@@ -111,12 +111,12 @@ There seems to be an issue when packaging the python file using pyinstaller, it 
 ```bash
 pyi-makespec --windowed <python source>
 ```
+
 Here I am using `--windowed` for hiding the console when executing, you can change that
-Next, open the .spec file and add `import pyqt5_material,os` at the top, then inside the Analysis datas list, paste this `(os.path.dirname(pyqt5_material.__file__)+"\\resources","pyqt5_material\\resources")` if you're using Windows. If you're using *nix, paste `(os.path.dirname(pyqt5_material.__file__)+"/resources","pyqt5_material/resources")`
+Next, open the .spec file and add `import pyqt5_material,os` at the top, then inside the Analysis datas list, paste this `(os.path.dirname(pyqt5_material.__file__),"pyqt5_material")`
+
 ```python
-datas=[(os.path.dirname(pyqt5_material.__file__)+"\\resources","pyqt5_material\\resources")]  #If it's Windows
-        
-datas=[(os.path.dirname(pyqt5_material.__file__)+"/resources","pyqt5_material/resources")]  #If its *nix
+datas=[(os.path.dirname(pyqt5_material.__file__),"pyqt5_material")]  #If it's Windows
 ```
 Save it and now run
 ```bash 
