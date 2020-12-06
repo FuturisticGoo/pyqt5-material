@@ -1,4 +1,6 @@
-# PyQt5 Material
+# Unmaintained, please use `qt-material`
+This fork is no longer maintained
+## PyQt5 Material
 
 This is another stylesheet for PyQt5 which looks like Material Design
 This is forked from the amazing stylesheet made by UN-GCPDS, here : https://github.com/UN-GCPDS/pyside-material
